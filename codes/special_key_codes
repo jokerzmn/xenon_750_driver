@@ -1,0 +1,13 @@
+left ctrl = 0x01
+left shift = 0x02
+left alt = 0x04
+right ctrl = 0x10
+right shift = 0x20
+right alt = 0x40
+
+Keys can be combined. Examples:
+left ctrl + left shift = 0x03
+right ctrl + right shift = 0x30
+left ctrl + right alt = 0x41
+left ctrl + left shift = 0x30
+
