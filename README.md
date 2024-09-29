@@ -1,26 +1,26 @@
 ## Linux driver for SINOWEALTH Genesis Xenon 750 mouse
 
 This driver was made with SINOWEALTH Genesis Xenon 750 mouse (258a:1007) in mind and was not tested for
-the other Genesis products.
+the other Genesis products. The driver runs in user-space.
 
-Tested on Arch Linux with kernel 6.10.3-lqx1-1-lqx.
+Tested on Arch Linux with kernel 6.10.10-lqx1-1-lqx.
 
 ## The driver allows you to
 
-- set USB polling rate,
-- change the functionality of each button,
-- set macro.
+- set USB polling rate
+- change the functionality of each button
+- set macro
 
 ### For each DPI mode
 
-- change DPI,
-- change logo and scroll wheel color,
-- disable specific DPI modes.
+- change DPI
+- change logo and scroll wheel color
+- disable specific DPI modes
 
 ## How to use
 
 ```
-Usage: ./driver [ARG...]
+Usage: xenon_driver [ARG...]
 
 Order of the arguments matter and should be placed with order like below.
 <config_file>               path to the config file
@@ -31,7 +31,7 @@ It is necessary to run the driver as root, otherwise libusb will have insufficie
 permissions to open USB devices.
 
 To customize mouse you need to provide the driver with the path of a config file.
-In the mouse_config.cfg file you can find a config file template with default mouse settings
+In the mouse.cfg file you can find a config file template with default mouse settings
 and instructions for each section.
 
 If you have more than one Xenon 750 mouse you can pass bus_number and port_number
@@ -71,5 +71,5 @@ They can be installed using a package manager such as pacman.
 sudo pacman -S libconfig libusb
 ```
 
-You can also build them from source.
+You can also use a different package manager or build them from source.
 
